@@ -1,0 +1,6 @@
+# Files
+config.json
+
+# Folders
+dist/
+node_modules/
