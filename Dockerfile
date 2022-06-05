@@ -10,6 +10,10 @@ COPY package*.json ./
 
 USER node
 
+run whoami
+
+run ls -al
+
 RUN npm install
 
 COPY --chown=node:node . .
