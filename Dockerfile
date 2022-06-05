@@ -10,9 +10,7 @@ RUN chown -R node:node /home/node/app
 
 USER node
 
-RUN ls -al
-
-RUN npm install
+RUN npm install --only=production
 
 COPY --chown=node:node . .
 
