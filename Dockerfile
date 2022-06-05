@@ -1,6 +1,6 @@
 FROM node:17
 
-RUN apt update || : apt install python -y
+RUN apt-get update || : apt-get install python -y
 
 RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
 
