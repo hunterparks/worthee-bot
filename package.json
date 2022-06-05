@@ -1,6 +1,6 @@
 {
   "name": "worthee-bot",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "A source of truth to see what is worthee and what is not!",
   "main": "dist/index.js",
   "scripts": {
