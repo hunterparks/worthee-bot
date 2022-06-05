@@ -1,14 +1,14 @@
 FROM node:17
 
-RUN apt-get update || : && apt-get install python -y
-
-RUN mkdir -p /home/node/app/node_modules && chown -R node:node /home/node/app
+RUN apt-get update || : && apt-get install python -y && mkdir -p /home/node/app/node_modules
 
 WORKDIR /home/node/app
 
-USER node
-
 COPY package*.json ./
+
+RUN chown -R node:node /home/node/app
+
+USER node
 
 RUN ls -al
 
