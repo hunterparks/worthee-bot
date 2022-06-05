@@ -6,10 +6,13 @@
   "scripts": {
     "build": "npx tsc",
     "clean": "rm -rf ./dist",
-    "deploy-commands": "node ./dist/deploy-commands.js",
     "dev": "npm run build && npm start",
     "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hunterparks/worthee-bot.git"
   },
   "keywords": [
     "bot",
@@ -22,6 +25,10 @@
     "email": "hunterparks+wortheebot@pm.me"
   },
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hunterparks/worthee-bot/issues"
+  },
+  "homepage": "https://github.com/hunterparks/worthee-bot#readme",
   "devDependencies": {
     "@types/node": "^17.0.35",
     "typescript": "^4.7.2"
