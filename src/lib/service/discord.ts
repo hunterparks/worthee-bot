@@ -7,43 +7,46 @@ import { REST } from '@discordjs/rest';
 import { Routes } from 'discord-api-types/v9';
 
 export class DiscordService {
-  private client: Client;
+    private client: Client;
 
-  constructor(
-    private commandService: CommandService,
-    private eventService: EventService,
-    private subscriptionService: SubscriptionService
-  ) {
-    this.client = new Client({
-      intents: [
-        GatewayIntentBits.Guilds,
-        GatewayIntentBits.GuildVoiceStates,
-        GatewayIntentBits.GuildMessages,
-      ],
-    });
-  }
-
-  public destroy() {
-    this.client.destroy();
-    process.exit(0);
-  }
-
-  public async setup() {
-    for (let event of await this.eventService.getEvents()) {
-      if (event.once) {
-        this.client.once(event.name, (...args) => event.execute(...args));
-      } else {
-        this.client.on(event.name, (...args) =>
-          event.execute(
-            this.commandService,
-            this.subscriptionService,
-            this.client,
-            ...args
-          )
-        );
-      }
+    constructor(
+        private commandService: CommandService,
+        private eventService: EventService,
+        private subscriptionService: SubscriptionService
+    ) {
+        this.client = new Client({
+            intents: [
+                GatewayIntentBits.Guilds,
+                GatewayIntentBits.GuildVoiceStates,
+                GatewayIntentBits.GuildMessages,
+                GatewayIntentBits.MessageContent,
+            ],
+        });
     }
 
-    this.client.login(TOKEN);
-  }
+    public destroy() {
+        this.client.destroy();
+        process.exit(0);
+    }
+
+    public async setup() {
+        for (let event of await this.eventService.getEvents()) {
+            if (event.once) {
+                this.client.once(event.name, (...args) =>
+                    event.execute(...args)
+                );
+            } else {
+                this.client.on(event.name, (...args) =>
+                    event.execute(
+                        this.commandService,
+                        this.subscriptionService,
+                        this.client,
+                        ...args
+                    )
+                );
+            }
+        }
+
+        await this.client.login(TOKEN);
+    }
 }

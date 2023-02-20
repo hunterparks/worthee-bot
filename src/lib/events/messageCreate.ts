@@ -41,7 +41,10 @@ export default {
         if (!client.application?.owner) {
             await client.application?.fetch();
         }
-        if (message.content.toLocaleLowerCase() === '!deploy') {
+        if (client.application?.id === message.author.id) {
+            return;
+        }
+        if (message.content.toLowerCase() === '!deploy') {
             if (message.author.id === client.application?.owner?.id) {
                 const commands = [
                     ...(await commandService.getCommands()).values(),
