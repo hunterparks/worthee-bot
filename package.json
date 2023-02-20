@@ -1,46 +1,46 @@
 {
-  "name": "worthee-bot",
-  "version": "1.0.13",
-  "description": "A source of truth to see what is worthee and what is not!",
-  "main": "dist/index.js",
-  "scripts": {
-    "build": "npx tsc",
-    "clean": "rm -rf ./dist",
-    "dev": "npm run build && npm start",
-    "start": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hunterparks/worthee-bot.git"
-  },
-  "keywords": [
-    "bot",
-    "discord",
-    "nodejs",
-    "typescript"
-  ],
-  "author": {
-    "name": "Hunter Parks",
-    "email": "hunterparks+wortheebot@pm.me"
-  },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hunterparks/worthee-bot/issues"
-  },
-  "homepage": "https://github.com/hunterparks/worthee-bot#readme",
-  "devDependencies": {
-    "@types/node": "^18.14.0",
-    "typescript": "^4.9.5"
-  },
-  "dependencies": {
-    "@discordjs/builders": "^1.4.0",
-    "@discordjs/rest": "^1.5.0",
-    "@discordjs/voice": "^0.14.0",
-    "discord-api-types": "^0.37.35",
-    "discord.js": "^14.7.1",
-    "libsodium-wrappers": "^0.7.11",
-    "youtube-dl-exec": "^2.2.3",
-    "ytdl-core": "^4.11.2"
-  }
+    "name": "worthee-bot",
+    "version": "1.0.14",
+    "description": "A source of truth to see what is worthee and what is not!",
+    "main": "dist/src/index.js",
+    "scripts": {
+        "build": "npx tsc",
+        "clean": "rm -rf ./dist",
+        "dev": "npm run build && npm start",
+        "start": "node .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hunterparks/worthee-bot.git"
+    },
+    "keywords": [
+        "bot",
+        "discord",
+        "nodejs",
+        "typescript"
+    ],
+    "author": {
+        "name": "Hunter Parks",
+        "email": "hunterparks+wortheebot@pm.me"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hunterparks/worthee-bot/issues"
+    },
+    "homepage": "https://github.com/hunterparks/worthee-bot#readme",
+    "devDependencies": {
+        "@types/node": "^18.14.0",
+        "typescript": "^4.9.5"
+    },
+    "dependencies": {
+        "@discordjs/builders": "^1.4.0",
+        "@discordjs/rest": "^1.5.0",
+        "@discordjs/voice": "^0.14.0",
+        "discord-api-types": "^0.37.35",
+        "discord.js": "^14.7.1",
+        "libsodium-wrappers": "^0.7.11",
+        "youtube-dl-exec": "^2.2.3",
+        "ytdl-core": "^4.11.2"
+    }
 }
