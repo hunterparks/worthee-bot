@@ -1,4 +1,4 @@
-import { Client, CommandInteraction } from 'discord.js';
+import { Client, ChatInputCommandInteraction } from 'discord.js';
 import { CommandService } from '../service/command';
 import { SubscriptionService } from '../service/subscription';
 
@@ -11,10 +11,10 @@ export default {
     client: Client,
     ...args: Array<any>
   ) {
-    if (!args.length || !(args[0] instanceof CommandInteraction)) {
+    if (!args.length || !(args[0] instanceof ChatInputCommandInteraction)) {
       return;
     }
-    const interaction = args[0] as CommandInteraction;
+    const interaction = args[0] as ChatInputCommandInteraction;
 
     if (!interaction.isCommand()) {
       return;

@@ -4,7 +4,7 @@ import {
   createAudioResource,
   demuxProbe,
 } from '@discordjs/voice';
-import { raw as ytdl } from 'youtube-dl-exec';
+import { exec as ytdl } from 'youtube-dl-exec';
 import { VideoInfoType } from '../types';
 
 export interface TrackData {

@@ -1,4 +1,4 @@
-import { Client, Intents, Message } from 'discord.js';
+import { Client, GatewayIntentBits, Message } from 'discord.js';
 import { CommandService } from './command';
 import { CLIENT_ID, TOKEN } from '../../config.json';
 import { EventService } from './event';
@@ -16,9 +16,9 @@ export class DiscordService {
   ) {
     this.client = new Client({
       intents: [
-        Intents.FLAGS.GUILDS,
-        Intents.FLAGS.GUILD_VOICE_STATES,
-        Intents.FLAGS.GUILD_MESSAGES,
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildVoiceStates,
+        GatewayIntentBits.GuildMessages,
       ],
     });
   }
