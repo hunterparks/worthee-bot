@@ -1,4 +1,4 @@
-FROM node:17
+FROM node:19
 
 RUN apt-get update || : && apt-get install python -y && mkdir -p /home/node/app/node_modules
 
