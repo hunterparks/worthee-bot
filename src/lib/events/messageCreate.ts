@@ -3,6 +3,8 @@ import { Routes } from 'discord-api-types/v9';
 import { Client, Message, EmojiIdentifierResolvable } from 'discord.js';
 import { CommandService } from '../service/command';
 import { SubscriptionService } from '../service/subscription';
+// TODO: Fix this
+// @ts-ignore
 import { CLIENT_ID, TOKEN } from '../../config.json';
 
 const outcome = {

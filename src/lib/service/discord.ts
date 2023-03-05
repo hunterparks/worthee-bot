@@ -1,5 +1,7 @@
 import { Client, GatewayIntentBits, Message } from 'discord.js';
 import { CommandService } from './command';
+// TODO: Fix this
+// @ts-ignore
 import { CLIENT_ID, TOKEN } from '../../config.json';
 import { EventService } from './event';
 import { SubscriptionService } from './subscription';
