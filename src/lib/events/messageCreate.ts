@@ -82,7 +82,7 @@ export default {
             const reactWithE = Math.random() > 1 - probability;
             console.log(`Normal E? ${reactWithE}`);
 
-            if (Math.random() > 0.5) {
+            if (Math.random() > 0.7) {
                 message.react('\u{1F1EA}');
             }
         }
